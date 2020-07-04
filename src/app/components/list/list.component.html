@@ -1,0 +1,24 @@
+<div class="container">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Full Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Address</th>
+        <th scope="col">Account created on</th>
+        <th scope="col">Account Balance</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let user of users; index as index">
+      <tr class="table-warning">
+        <th scope="row">{{ index + 1 }}</th>
+        <td>{{ user.first }} {{ user.last }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.address }}</td>
+        <td>{{ user.created }}</td>
+        <td>{{ user.balance }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
